@@ -1,8 +1,8 @@
-=== Twispay Credit Card Payments ===  
-Contributors: twispay  
-Tags: payment, gateway, module  
-Requires at least: 4.6  
-Tested up to: 6.1  
+=== Twispay Credit Card Payments ===
+Contributors: twispay
+Tags: payment, gateway, module
+Requires at least: 4.6
+Tested up to: 6.2.2
 
 Twispay enables new and existing store owners to quickly and effortlessly accept online credit card payments over their WooCommerce shop
 
@@ -19,7 +19,6 @@ For more details concerning our pricing in your region, please check out our [pr
 == Installation ==
 
 The easiest way of installing our module is by visiting the [official module page](https://wordpress.org/plugins/twispay/).
-<!-- Alternatively, you can check out our [installation guide](https://twis.li/2ueQ6Rz) for detailed step by step instructions. -->
 1. Log into your WordPress site.
 2. Go to: Plugins > Add New.
 3. Search for "Twispay".
@@ -30,7 +29,7 @@ The easiest way of installing our module is by visiting the [official module pag
 8. Enter your **Site ID**. _(Twispay Staging Account ID: You can get one from [here for live](https://merchant.twispay.com/auth/signin) or from [here for stage](https://merchant-stage.twispay.com/auth/signin))_
 9. Enter your **Private Key**. _(Twispay Secret Key: You can get one from [here for live](https://merchant.twispay.com/auth/signin) or from [here for stage](https://merchant-stage.twispay.com/auth/signin))_
 10. Select the custom page you want to redirect the customer after the payment **Redirect to custom page Thank you page**. _(Leave 'Default' to redirect to order confirmation default page.)_
-11. Enter your tehnical **Contact Email**. _(This will be displayed to customers in case of a payment error)_
+11. Enter your technical **Contact Email**. _(This will be displayed to customers in case of a payment error)_
 12. Save your changes.
 
 == Screenshots ==
@@ -40,16 +39,18 @@ The easiest way of installing our module is by visiting the [official module pag
 3. Fully customizable checkout experience
 
 == Changelog ==
+= 2.0.1 =
+* Hotfix
 
-= 1.2.0 =
-* Replace url_esc with url_esc_raw for plain usage
-* Add default title and description for payment choice
-* Remove refund button and cancel subscription from twispay transactions list
-* Fix refund reason
+= 2.0.0 =
+* We completely removed the management of transactions and simplified it by synchronizing it with woocommerce order/subscription updates
+* Fix order/subscription status updates when updating woocommerce interface
+* Add Iframe support for payment page
+* Add subscription fixed rebill feature with fractional payment system
+* Fix subscription billing issues
 
 = 1.1.3 =
 * Fix subscription processor. 
-* Add amount and reason to refund
 
 = 1.1.2 =
 * Fix IPN status and change IPN url to a more intuitive one.
